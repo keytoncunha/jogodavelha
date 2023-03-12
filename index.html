@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo da Velha</h1>
+    </header>
+    <main>
+        <div id="cadastro">
+            <form autocomplete="off">
+                <div>
+                    <label for="jx">Jogador <strong>X</strong></label><br>
+                    <input type="text" id="jx" placeholder="Min. 4 digi..." maxlength="15">
+                </div>
+                <div>
+                    <label for="jo">Jogador <strong>O</strong></label><br>
+                    <input type="text" id="jo" placeholder="Min. 4 digi..." maxlength="15">
+                </div>
+                <div>
+                    <input type="button" value="Iniciar Jogo" onclick="iniciar()">
+                </div>
+            </form>
+        </div>
+        <div id="jogo">
+            <table>
+                <tr>
+                    <td class="psc" onclick="p1()"></td>
+                    <td class="psc" onclick="p2()"></td>
+                    <td class="psc" onclick="p3()"></td>
+                </tr>
+                <tr>
+                    <td class="psc" onclick="p4()"></td>
+                    <td class="psc" onclick="p5()"></td>
+                    <td class="psc" onclick="p6()"></td>
+                </tr>
+                <tr>
+                    <td class="psc" onclick="p7()"></td>
+                    <td class="psc" onclick="p8()"></td>
+                    <td class="psc" onclick="p9()"></td>
+                </tr>
+            </table>
+        
+        <p id="info">
+            Jogador <strong>X</strong> inicia!
+        </p>
+
+        <button id="limpar" onclick="limpar()">Limpar</button>
+
+        </div>
+    </main>
+    <footer>
+        <h2>&#x1F517;<a href="https://github.com/keytoncunha" target="_blank">Keyton Dev.</a></h2>
+    </footer>
+    <script src="jss/js.js"></script>
+</body>
+</html>
