@@ -8,9 +8,9 @@ let iniciar=()=>{
     } else {
         document.querySelector('div#cadastro').style.display='none'
         document.querySelector('div#jogo').style.display='block'
-        let njv=''
     }
 }
+let njv=''
 
 let psc=[...document.querySelectorAll('.psc')]
 let info=document.querySelector('p#info')
@@ -19,39 +19,16 @@ let c=0
 function limpar(){
     info.innerHTML='Jogador <strong>X</strong> inicia!'
     jv='X'
-    psc.map((el,i)=>{
+    psc.map((el)=>{
         el.innerHTML=''
     })
     c=0
 }
-
-const p1=()=>{
-    seGanhou(0)
-}
-const p2=()=>{
-    seGanhou(1)
-}
-const p3=()=>{
-    seGanhou(2)
-}
-const p4=()=>{
-    seGanhou(3)
-}
-const p5=()=>{
-    seGanhou(4)
-}
-const p6=()=>{
-    seGanhou(5)
-}
-const p7=()=>{
-    seGanhou(6)
-}
-const p8=()=>{
-    seGanhou(7)
-}
-const p9=()=>{
-    seGanhou(8)
-}
+psc.map((posic, ind)=>{
+    posic.addEventListener('click',()=>{
+        seGanhou(ind)
+    })
+})
 
 let seGanhou=(p)=>{
     
